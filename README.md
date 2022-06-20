@@ -1,6 +1,14 @@
 # TT_Todos
 
+## Install
 
+```bash
+$ yarn
+$ cd ios && pod install
+
+$ yarn ios
+$ yarn android
+```
 
 ## Demo
 
