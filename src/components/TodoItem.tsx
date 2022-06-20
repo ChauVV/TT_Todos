@@ -37,7 +37,6 @@ const TodoItem = ({item, selected, setSelected}: any) => {
         />
       ) : (
         <CheckBox
-          // title={item?.title}
           disabled={true}
           checkedIcon="dot-circle-o"
           uncheckedIcon="circle-o"

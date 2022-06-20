@@ -58,8 +58,13 @@ const ModalAdd = ({
       setPriority(selected?.priority);
       setFrom(selected?.from);
       setTo(selected?.to);
+    } else {
+      setNewTask('');
+      setPriority(PRIORITIES.LOW);
+      setFrom(moment(moment()).unix().toString());
+      setTo(moment(moment().add(1, 'day')).unix().toString());
     }
-  }, [selected]);
+  }, [selected, modalVisible]);
 
   const _addTodo = () => {
     Keyboard.dismiss();
@@ -70,11 +75,6 @@ const ModalAdd = ({
       from: from,
       to: to,
     };
-
-    setNewTask('');
-    setPriority(PRIORITIES.LOW);
-    setFrom(moment(moment()).unix().toString());
-    setTo(moment(moment().add(1, 'day')).unix().toString());
 
     add(td);
   };
@@ -89,10 +89,6 @@ const ModalAdd = ({
       to: to,
     };
 
-    setNewTask('');
-    setPriority(PRIORITIES.LOW);
-    setFrom(moment(moment()).unix().toString());
-    setTo(moment(moment().add(1, 'day')).unix().toString());
     edit(td);
   };
 

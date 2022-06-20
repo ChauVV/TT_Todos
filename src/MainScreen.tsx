@@ -19,18 +19,6 @@ import TodoItem from 'components/TodoItem';
 import FABGroup from 'components/FABGroup';
 import ModalAdd from 'components/ModalAdd';
 
-enum PRIORITIES {
-  HIGHT = 3,
-  MEDIUM = 2,
-  LOW = 1,
-}
-const data = [
-  {id: 'todo1', title: 'todo1', priority: PRIORITIES.HIGHT, from: '', to: ''},
-  {id: 'todo2', title: 'todo2', priority: PRIORITIES.LOW, from: '', to: ''},
-  {id: 'todo3', title: 'todo3', priority: PRIORITIES.HIGHT, from: '', to: ''},
-  {id: 'todo4', title: 'todo4', priority: PRIORITIES.MEDIUM, from: '', to: ''},
-];
-
 interface MainScreenProps {
   todos: any;
   addTodo: Function;
@@ -95,7 +83,7 @@ const MainScreen = ({
 
     setTimeout(() => {
       addTodo(_td);
-    }, 100);
+    }, 0);
   };
 
   const _editTOdo = (td: any) => {
@@ -105,7 +93,7 @@ const MainScreen = ({
 
     setTimeout(() => {
       editTodo(_td);
-    }, 100);
+    }, 0);
   };
 
   return (
