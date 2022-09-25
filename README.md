@@ -3,6 +3,9 @@
 ## Install
 
 ```bash
+$ yarn add moti
+$ yarn add react-native-reanimated
+
 $ yarn
 $ cd ios && pod install
 
